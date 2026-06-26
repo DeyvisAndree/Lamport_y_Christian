@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="christian.css">
+    <title>Algoritmo de Cristian</title>
+</head>
+<body>
+<div class="container">
+    <h2 style="text-align: center;">Auditoría de Sincronización: Algoritmo de Cristian</h2>
+    <div class="grid">
+        <div class="box">
+            <p>CLIENTE (LOCAL)</p>
+            <div class="timer" id="timerLocal">00:00:00.000000</div>
+            <span id="statusTag" style="background: #fee2e2; color: var(--danger); padding: 4px 12px; border-radius: 20px; font-size: 0.8em;">DESINCRONIZADO</span>
+        </div>
+        <div class="box">
+            <p>SERVIDOR (PATRÓN)</p>
+            <div class="timer" id="timerServ" style="color: var(--success);">00:00:00.000000</div>
+        </div>
+    </div>
+    <div class="controls">
+        <label>Latencia de red (RTT): <span id="rttVal">200</span> ms</label>
+        <input type="range" id="rttSlider" min="10" max="500" value="200" oninput="updateRTT(this.value)">
+        <br>
+        <button class="btn-sync" onclick="sincronizar()">⚡ Sincronizar</button>
+        <button class="btn-reset" onclick="reiniciar()">🔄 Reiniciar</button>
+        <button class="btn-print" onclick="window.print()">🖨️ Exportar Reporte</button>
+    </div>
+    <div class="results-area">
+        <h3>Historial de Eventos del Sistema</h3>
+        <table id="resultsTable">
+            <thead><tr><th>ID</th><th>Timestamp</th><th>RTT</th><th>Ajuste Aplicado</th><th>Estado</th></tr></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+<script src="christian.js"></script>
+</body>
+</html>
