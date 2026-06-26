@@ -1,0 +1,19 @@
+/* Estilos unificados de Auditoría */
+body { background-color: #f1f5f9; color: #1e293b; font-family: 'Inter', sans-serif; padding: 40px; margin: 0; min-height: 100vh; }
+.container { max-width: 1000px; margin: auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+header { border-bottom: 1px solid #e2e8f0; padding-bottom: 20px; margin-bottom: 30px; text-align: center; }
+
+.main-layout { display: grid; grid-template-columns: 350px 1fr; gap: 30px; }
+#cards-container { display: flex; flex-direction: column; gap: 15px; }
+.card { background: #fafafa; border: 1px solid #e2e8f0; padding: 20px; border-radius: 8px; }
+.card.critical { border-color: #10b981; box-shadow: 0 0 10px rgba(16, 185, 129, 0.1); }
+
+.cs-box { padding: 20px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0; text-align: center; font-weight: 600; color: #475569; }
+.cs-box.active { border-color: #10b981; color: #10b981; background: #ecfdf5; }
+
+.log-box { background: #0f172a; color: #e2e8f0; height: 300px; overflow-y: auto; padding: 16px; font-family: 'Fira Code', monospace; font-size: 0.85rem; border-radius: 8px; }
+.btn { padding: 8px 16px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; transition: 0.2s; }
+.btn-pedir { background: #3b82f6; color: white; }
+.btn-entrar { background: #10b981; color: white; }
+.btn-salir { background: #ef4444; color: white; }
+.btn-sys { background: #1e293b; color: white; }
